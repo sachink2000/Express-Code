@@ -11,15 +11,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Install dependencies
-        run: npm install
-
+  
       - name: Run SonarQube Scanner
         env:
           SONAR_HOST_URL: https://redesigned-umbrella-grwx65pqrp5fxx9-9000.app.github.dev/projects
