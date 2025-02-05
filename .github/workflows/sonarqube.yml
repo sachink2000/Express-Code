@@ -1,0 +1,27 @@
+name: SonarQube Analysis
+
+on:
+  push:
+    branches:
+      - main  # or the branch you want to analyze
+
+jobs:
+  sonar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run SonarQube Scanner
+        env:
+          SONAR_HOST_URL: https://redesigned-umbrella-grwx65pqrp5fxx9-9000/
+          SONAR_LOGIN: squ_a714db8c43fcb5d998abe7bef5685d473f7f9c52
+        run: npx sonarqube-scanner
