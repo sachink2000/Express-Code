@@ -3,7 +3,7 @@ name: SonarQube Analysis
 on:
   push:
     branches:
-      - main  # or the branch you want to analyze
+      - master  # or the branch you want to analyze
 
 jobs:
   sonar:
