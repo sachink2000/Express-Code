@@ -22,6 +22,6 @@ jobs:
 
       - name: Run SonarQube Scanner
         env:
-          SONAR_HOST_URL: https://redesigned-umbrella-grwx65pqrp5fxx9-9000/
+          SONAR_HOST_URL: https://redesigned-umbrella-grwx65pqrp5fxx9-9000.app.github.dev/projects
           SONAR_LOGIN: squ_a714db8c43fcb5d998abe7bef5685d473f7f9c52
         run: npx sonarqube-scanner
